@@ -1,0 +1,67 @@
+@use '../abstracts/' as *;
+
+@keyframes glitch {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    left: 8px;
+    bottom: -4px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 4px;
+    left: -8px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showCharacter {
+  5% {
+    transform: translateX(0) translateY(-50%);
+  }
+  20% {
+    height: 30vh;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    visibility: visible;
+    height: 100vh;
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+@keyframes hideCharacter {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    height: 100vh;
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+  20% {
+    opacity: 1;
+    visibility: visible;
+    height: 30vh;
+    overflow: hidden;
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    height: 0vh;
+    transform: translateX(-100vw) translateY(-50%);
+  }
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>La casa de papel | Cast</title>
+  </head>
+
+  <body>
+    <span class="prevbtn"> </span>
+    <span class="nextbtn"></span>
+
+    <div class="cast__bg">
+      <img src="" class="cast__bg-img" />
+      <img src="" class="cast__bg-img" />
+      <img src="" class="cast__bg-img" />
+      <img src="" class="cast__bg-img" />
+      <img src="" class="cast__bg-img" />
+      <img src="" class="cast__bg-img" />
+      <img src="" class="cast__bg-img" />
+      <img src="" class="cast__bg-img" />
+    </div>
+
+    <!-- HEADER STARTS -->
+    <header class="header container">
+      <figure class="header__logo-box">
+        <a href="index.html" aria-label="la casa de papel">
+          <img
+            src="assets/media/logo.png"
+            alt="La casa de papel"
+            class="header__logo"
+          />
+        </a>
+      </figure>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="characters.html">Characters</a></li>
+          <li><a href="#">Cast</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- HEADER ENDS -->
+
+    <main>
+      <!-- CAST SECTION STARTS -->
+      <section class="main-content container" id="cast">
+        <ul class="cast-container">
+          <li class="actor">
+            <figure class="actor__image">
+              <img
+                src="assets/media/cast/alvaro-morte.jpg"
+                alt="Alvaro Morte"
+              />
+            </figure>
+
+            <div class="actor__details">
+              <p class="actor__name">Alvaro Morte</p>
+              <p class="actor__character">The Professor</p>
+            </div>
+          </li>
+          <li class="actor">
+            <figure class="actor__image">
+              <img
+                src="assets/media/cast/ursula-corbero.jpg"
+                alt="Tokyo
+              character"
+              />
+            </figure>
+            <div class="actor__details">
+              <p class="actor__name">Ursula Corbero</p>
+              <p class="actor__character">Tokyo</p>
+            </div>
+          </li>
+          <li class="actor">
+            <figure class="actor__image">
+              <img
+                src="assets/media/cast/pedro-alonso.jpg"
+                alt="Berlin character"
+              />
+            </figure>
+            <div class="actor__details">
+              <p class="actor__name">Pedro Alonso</p>
+              <p class="actor__character">Berlin</p>
+            </div>
+          </li>
+          <li class="actor">
+            <figure class="actor__image">
+              <img
+                src="assets/media/cast/alba-flores.jpg"
+                alt="Nairobi character"
+              />
+            </figure>
+            <div class="actor__details">
+              <p class="actor__name">Alba Flores</p>
+              <p class="actor__character">Nairobi</p>
+            </div>
+          </li>
+
+          <li class="actor">
+            <figure class="actor__image">
+              <img
+                src="assets/media/cast/jaime-lorente.jpg"
+                alt="Denver character"
+              />
+            </figure>
+            <div class="actor__details">
+              <p class="actor__name">Jaime Lorento</p>
+              <p class="actor__character">Denver</p>
+            </div>
+          </li>
+          <li class="actor">
+            <figure class="actor__image">
+              <img
+                src="assets/media/cast/itziar-ituno.jpg"
+                alt="Lisbon character"
+              />
+            </figure>
+            <div class="actor__details">
+              <p class="actor__name">Itzier Ituno</p>
+              <p class="actor__character">Lisbon</p>
+            </div>
+          </li>
+          <li class="actor">
+            <figure class="actor__image">
+              <img
+                src="assets/media/cast/darko-peric.jpg"
+                alt="Helsinki character"
+              />
+            </figure>
+            <div class="actor__details">
+              <p class="actor__name">Darko Peric</p>
+              <p class="actor__character">Helsinki</p>
+            </div>
+          </li>
+          <li class="actor">
+            <figure class="actor__image">
+              <img
+                src="assets/media/cast/miguel-herran.jpg"
+                alt="Rio character"
+              />
+            </figure>
+            <div class="actor__details">
+              <p class="actor__name">Miguel Herran</p>
+              <p class="actor__character">Rio</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- CAST SECTION ENDS -->
+    </main>
+
+    <!-- FOOTER STARTS -->
+    <footer class="footer container">
+      <ul class="footer__nav">
+        <li>
+          <a href="https://www.facebook.com" aria-label="facebook"
+            ><img src="assets/media/facebook.svg" alt="facebook logo"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com" aria-label="twitter"
+            ><img src="assets/media/twitter.svg" alt="twitter logo"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com" aria-label="youtube"
+            ><img src="assets/media/youtube.svg" alt="youtube logo"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com" aria-label="instagram"
+            ><img src="assets/media/instagram.svg" alt="instagram logo"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+    <!-- FOOTER ENDS -->
+
+    <script>
+      'use strict';
+
+      const prevBtn = document.querySelector('.prevbtn');
+      const nextBtn = document.querySelector('.nextbtn');
+      const mainCast = document.querySelector('.main-content');
+      const castBackground = document.querySelector('.cast__bg');
+      const images = [...document.querySelectorAll('.cast__bg-img')];
+      const actors = document.querySelectorAll('.actor');
+      const actorsArr = [...actors];
+      const castContainer = document.querySelector('.cast-container');
+      let castNumber = 0;
+      let counter = 0;
+
+      const activateCast = cast => {
+        cast.classList.add('active');
+        castBackground.style.left = `${-castNumber * 101}vw`;
+      };
+
+      const deactiveCast = cast => {
+        cast.classList.remove('active');
+      };
+
+      const activeActorImage = castNumber => {
+        actors.forEach(actor => {
+          deactiveCast(actor);
+        });
+        activateCast(actors[castNumber]);
+      };
+
+      // filling up the backgrounds with the related images
+      images.forEach((image, i) => {
+        image.src = actors[i].querySelector('img').src;
+      });
+
+      activateCast(actors[castNumber]);
+
+      // clicking on an image and showing it
+      castContainer.addEventListener('click', e => {
+        const clicked = e.target.closest('.actor');
+
+        if (!clicked) return;
+
+        castNumber = actorsArr.indexOf(clicked);
+
+        actorsArr.forEach((actor, i) => {
+          deactiveCast(actor);
+          if (castNumber === i) {
+            activateCast(actors[castNumber]);
+          }
+        });
+      });
+
+      // previous button click event
+      prevBtn.addEventListener('click', () => {
+        setTimeout(() => {
+          const rightSideDistance = castContainer.getBoundingClientRect().right;
+
+          if (castNumber === 0) return;
+
+          castNumber -= 1;
+
+          castBackground.style.left = `${castNumber * 101}vw`;
+
+          activeActorImage(castNumber);
+
+          if (
+            rightSideDistance >=
+            castContainer.getBoundingClientRect().width +
+              mainCast.getBoundingClientRect().left
+          ) {
+            return;
+          } else {
+            counter += 22; // width of each column
+            castContainer.style.left = `${counter}rem`;
+          }
+        }, 500);
+      });
+
+      // next button click event
+      nextBtn.addEventListener('click', () => {
+        setTimeout(() => {
+          const rightSideDistance = castContainer.getBoundingClientRect().right;
+
+          if (castNumber === 7) return;
+
+          castNumber += 1;
+
+          castBackground.style.left = `${-castNumber * 101}vw`;
+
+          activeActorImage(castNumber);
+
+          if (
+            rightSideDistance <
+            mainCast.getBoundingClientRect().width + 0.07 * window.innerWidth
+          ) {
+            return;
+          } else {
+            counter -= 22;
+            castContainer.style.left = `${counter}rem`;
+          }
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

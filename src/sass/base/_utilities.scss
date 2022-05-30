@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+
+.container {
+  max-width: 1300px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.scroll-inline {
+  scroll-snap-type: inline mandatory;
+  overflow-x: scroll;
+
+  & > * {
+    scroll-snap-align: start;
+  }
+}

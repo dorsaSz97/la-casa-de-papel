@@ -1,0 +1,127 @@
+@use '../abstracts/' as *;
+
+.prevbtn,
+.nextbtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  z-index: 100;
+}
+.prevbtn {
+  left: 2%;
+  background: url('../assets/media/characters/left-arrow.png') center center
+    no-repeat;
+}
+.nextbtn {
+  right: 2%;
+  background: url('../assets/media/characters/right-arrow.png') center center
+    no-repeat;
+}
+
+.cast__bg {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // with scroll bar's width considered for each item (8*1)
+  width: 808vw;
+  height: 100%;
+  z-index: -10;
+  transition: all 0.5s;
+
+  &-img {
+    flex: 1;
+    height: 100%;
+    width: 101vw;
+    object-fit: cover;
+  }
+}
+
+#cast {
+  display: flex;
+  position: relative;
+  top: 100%;
+  left: 0%;
+  transform: translateY(-100%);
+  height: 30%;
+
+  .cast-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 22rem;
+    grid-template-rows: 100%;
+    position: relative;
+    left: 0;
+    height: 100%;
+    border-top: 1px solid $color-primary;
+    border-bottom: 1px solid $color-primary;
+    background-color: rgba($color-black, 0.4);
+    backdrop-filter: brightness(0.3);
+    transition: all 0.7s;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+
+    .actor {
+      position: relative;
+      padding: 0 1rem;
+      background-color: transparent;
+      transition: all 0.7s;
+
+      &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        background-color: transparent;
+        color: $color-white;
+      }
+
+      &__name,
+      &__character {
+        font-family: $font-nav;
+        letter-spacing: 1.2px;
+      }
+
+      &__image {
+        height: 100%;
+        border-right: 3px solid transparent;
+        border-left: 3px solid transparent;
+
+        img {
+          height: 100%;
+          opacity: 0.7;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      &.active {
+        .actor__details {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        figure {
+          border-right: 3px solid $color-primary;
+          border-left: 3px solid $color-primary;
+        }
+      }
+    }
+  }
+}
