@@ -1,6 +1,6 @@
-# La casa de papel
+# La casa de papel (not responsive)
 
-This is a website for the show 'La casa de papel'.
+This is a website for the show 'La casa de papel' coded with JavaScript.
 
 (The design is by Khaled Zaabalawi)
 
