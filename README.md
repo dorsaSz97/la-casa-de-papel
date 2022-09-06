@@ -1,6 +1,6 @@
-# La casa de papel Website
+# La casa de papel
 
-This is my 19th project which is a website for the show 'La casa de papel'.
+This is a website for the show 'La casa de papel'.
 
 (The design is by Khaled Zaabalawi)
 
